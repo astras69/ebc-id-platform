@@ -1,8 +1,4 @@
-# Ricreazione file HTML dopo reset
-from pathlib import Path
 
-# Contenuto HTML moderno e comunicativo
-html_code = """
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -11,42 +7,48 @@ html_code = """
     <title>Email Blockchain Identity Platform</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            background-color: #fdfdfd;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
+            line-height: 1.6;
         }
         header {
-            background-color: #111;
+            background: #2c3e50;
             color: #fff;
-            width: 100%;
-            padding: 20px 0;
-            margin-bottom: 30px;
+            padding: 40px 20px;
+            text-align: center;
         }
-        h1 {
+        header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
-        .container {
-            max-width: 800px;
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        ul {
+            padding-left: 20px;
         }
         .cta-button {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #2e7d32;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 6px;
             margin-top: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
         }
         footer {
-            margin-top: 40px;
-            font-size: 0.9em;
+            background: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
             color: #777;
         }
     </style>
@@ -54,21 +56,37 @@ html_code = """
 <body>
     <header>
         <h1>Email Blockchain Identity Platform</h1>
+        <p>Verifica e registra indirizzi email su blockchain in modo sicuro e decentralizzato.</p>
     </header>
-    <div class="container">
-        <p><strong>Registra, verifica e certifica indirizzi email tramite blockchain.</strong></p>
-        <p>Una piattaforma sicura, decentralizzata e integrabile per garantire l'autenticità e la non ripudiabilità della comunicazione digitale.</p>
+
+    <section>
+        <h2>🔍 Cos'è questo progetto?</h2>
+        <p>È una piattaforma progettata per <strong>associare, certificare e validare indirizzi email</strong> sulla blockchain. L’obiettivo è fornire uno standard digitale affidabile per l’identificazione del mittente.</p>
+    </section>
+
+    <section>
+        <h2>⚙️ Come funziona</h2>
+        <ul>
+            <li>L’utente registra il proprio indirizzo email sulla piattaforma</li>
+            <li>Un hash dell’email viene generato e salvato su blockchain tramite smart contract</li>
+            <li>L’associazione è permanente, immutabile e consultabile</li>
+            <li>La validazione può essere integrata via API in sistemi di terze parti</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🛡️ Vantaggi</h2>
+        <ul>
+            <li>Impossibilità di falsificare l'identità del mittente</li>
+            <li>Protezione contro spoofing e phishing</li>
+            <li>Riconoscimento legale e forense della prova digitale</li>
+            <li>Soluzione indipendente o integrabile in ecosistemi esistenti (es. EBC)</li>
+        </ul>
         <a href="mailto:sisco@siscosystem.it" class="cta-button">Contattaci</a>
-        <footer>
-            <p>Powered by Luigi Iannantuoni &middot; Sisco System Europe &middot; 2025</p>
-        </footer>
-    </div>
+    </section>
+
+    <footer>
+        Powered by Luigi Iannantuoni · Sisco System Europe · 2025
+    </footer>
 </body>
 </html>
-"""
-
-# Scrittura del file HTML
-html_path = Path("/mnt/data/index_email_blockchain_ready.html")
-html_path.write_text(html_code, encoding="utf-8")
-
-html_path.name
